@@ -1,5 +1,181 @@
+@font-face {
+    font-family: "norse";
+    src: url(./Fonts/Norse-Bold.woff2),
+            url(./Fonts/Norse-Bold.woff);
+}
+
+:root{
+    --accent-color: rgba(240, 248, 255, 0.8);
+    --btn-color: rgb(0, 112, 149);
+    --btn-color-hover: rgb(2, 97, 129);
+}
+
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+body{
+    display: flex;
+    flex-direction: row;
+}
+
+.side-bar{
+    display: flex;
+    flex-direction: column;
+    width: 35vw;
+    height: 100vh;
+    background: no-repeat fixed;
+    background-image: url(./northern-lights.jpg);
+    background-size: contain;
+    padding-bottom: 2vh;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    background-color: rgb(0, 0, 0, 0.5);
+    width: inherit;
+    height: 15vh;
+    justify-self: center;
+    margin-top: 20vh;
+    font-family: "norse";
+    font-size: 5vw;
+    display: flex;
+    align-items: center;
+    color: aliceblue;
+    gap: 2vw;
+    justify-content: center;
+    text-shadow: 1px 1px 2px;
+}
+
+img{
+    height: 12vh;
+}
+
+.side-bar>p, .side-bar>p>a{
+    color: aliceblue;
+}
+.side-bar>p>a:hover{
+    color: rgb(204, 210, 215);
+}
+
+/* main content */
+.main{
+        background-color: var(--accent-color);
+}
+ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+section{
+    width: 75vw;
+    display: flex;
+    flex-direction: column;
+    gap: 10vh;
+    padding: 10vh 2vw;
+    font-size: large;
+    height: 100vh;
+}
+
+section p{
+    font-size: 2rem;
+    font-family: sans-serif, system-ui;
+}
+
+form{
+    margin: 0px -2vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+fieldset{
+    border: none;
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+    background-color: white;
+    padding: 45px 50px;
+    box-shadow: 2px 5px 10px gray;
+}
+
+button{
+    padding: 10px 40px;
+    border-radius: 15px;
+    font-size: large;
+    background-color: var(--btn-color);
+    color: white;
+    border: none;
+    margin: 20px;
+    position: relative;
+    left: 50px;
+    box-shadow: 0px 0px 2px var(--btn-color);
+}
+
+button:hover{
+    background-color: var(--btn-color-hover);
+    transform: scale(1.01);
+    transition: 0.2s ease-in-out;
+}
+
+button:active{
+    transform: translateX(2px);
+}
+
+.form>p{
+    font-size: 1.2rem;
+}
+
+input{
+    width: 250px;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid black;
+    box-shadow: 1px 1px 2px;
+}
+
+li{
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+}
+
+.form-row{
+    display: flex;
+    flex-direction: column;
+}
+
+h3{
+    font-family: sans-serif;
+    font-size: 2rem;
+    font-weight: 500;
+    text-shadow: 0px 0px 1px;
+}
+input:user-invalid{
+    border: red 2px dashed;
+}
+input:user-valid{
+    border: green 2px solid;
+}
+ section a{
+    color: var(--btn-color);
+    text-decoration: none;
+    font-weight: 600;
+ }
+ section a:hover{
+    color: var(--btn-color-hover);
+    font-size: 1.02em;
+ }
+
+ label{
+    font-weight: 500;
+ }
+input:focus{
+    appearance: none;
+    outline: none;
+    border: solid 2px rgb(0, 0, 255); 
 }
